@@ -1,5 +1,4 @@
 #!/bin/sh
-# Alexandre Jeronimo Correa - ajcorrea@gmail.com
 # Script para AirOS Ubiquiti
 # Remove o worm MF e atualiza para a ultima versao do AirOS disponivel oficial
 #
@@ -21,14 +20,12 @@
 # ALTERACOES DE PORTAS - Diego Canton
 cat /tmp/system.cfg | grep -v http > /tmp/system2.cfg
 echo "httpd.https.status=disabled" >> /tmp/system2.cfg
-echo "httpd.port=81" >> /tmp/system2.cfg
+echo "httpd.port=8099" >> /tmp/system2.cfg
+echo "sshd.port=8022" >> /tmp/system2.cfg
 echo "httpd.session.timeout=900" >> /tmp/system2.cfg
 echo "httpd.status=enabled" >> /tmp/system2.cfg
 cat /tmp/system2.cfg | uniq > /tmp/system.cfg
 rm /tmp/system2.cfg
-
-# Ativa Compliance TEST
-# touch /etc/persistent/ct
 
 #Salva alteracoes
 /bin/cfgmtd -w -p /etc/
