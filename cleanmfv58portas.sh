@@ -1,4 +1,5 @@
 #!/bin/sh
+# Alexandre Jeronimo Correa - ajcorrea@gmail.com
 # Script para AirOS Ubiquiti
 # Remove o worm MF e atualiza para a ultima versao do AirOS disponivel oficial
 #
