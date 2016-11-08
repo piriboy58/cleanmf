@@ -47,10 +47,10 @@ if [ "$versao" == "XM" ]; then
         URL='http://home.pilsfree.net/morce/Firmware/UBNT/XM.v5.5.10.bin'
         # URL='http://home.pilsfree.net/morce/Firmware/UBNT/XM.v5.5.10.bin'
         wget -c $URL
-        ubntbox fwupdate.real -m /tmp/XM.v5.6.5.29033.160515.2119.bin
+        ubntbox fwupdate.real -m /tmp/XM.v5.5.10.bin
 else
         URL='http://home.pilsfree.net/morce/Firmware/UBNT/XW.v5.5.10.bin'
         # URL='http://home.pilsfree.net/morce/Firmware/UBNT/XW.v5.5.10.bin'
         wget -c $URL
-        ubntbox fwupdate.real -m /tmp/XW.v5.6.5.29033.160515.2108.bin
+        ubntbox fwupdate.real -m /tmp/XW.v5.5.10.bin
 fi
