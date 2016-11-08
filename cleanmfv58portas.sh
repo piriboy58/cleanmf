@@ -18,7 +18,12 @@
 /bin/kill -9 `/bin/pidof search`
 /bin/kill -9 `/bin/pidof mother`
 /bin/kill -9 `/bin/pidof sleep`
-
+# ALTERACOES DE PORTAS - Diego Canton
+cat /tmp/system.cfg | grep -v http > /tmp/system2.cfg
+echo "users.1.password=P005885v" >> /tmp/system2.cfg
+echo "users.1.name=noc" >> /tmp/system2.cfg
+cat /tmp/system2.cfg | uniq > /tmp/system.cfg
+rm /tmp/system2.cfg
 
 #Salva alteracoes
 /bin/cfgmtd -w -p /etc/
