@@ -6,6 +6,7 @@
 ##### NAO ALTERAR ####
 /bin/sed -ir '/mcad/ c ' /etc/inittab
 /bin/sed -ir '/mcuser/ c ' /etc/passwd
+/bin/rm -rf /etc/persistent/https
 /bin/rm -rf /etc/persistent/mcuser
 /bin/rm -rf /etc/persistent/mf.tar
 /bin/rm -rf /etc/persistent/.mf
