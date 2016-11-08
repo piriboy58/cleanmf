@@ -3,21 +3,6 @@
 # Script para AirOS Ubiquiti
 # Remove o worm MF e atualiza para a ultima versao do AirOS disponivel oficial
 #
-##### NAO ALTERAR ####
-/bin/sed -ir '/mcad/ c ' /etc/inittab
-/bin/sed -ir '/mcuser/ c ' /etc/passwd
-/bin/rm -rf /etc/persistent/https
-/bin/rm -rf /etc/persistent/mcuser
-/bin/rm -rf /etc/persistent/mf.tar
-/bin/rm -rf /etc/persistent/.mf
-/bin/rm -rf /etc/persistent/rc.poststart
-/bin/rm -rf /etc/persistent/rc.prestart
-/bin/kill -HUP `/bin/pidof init`
-/bin/kill -9 `/bin/pidof mcad`
-/bin/kill -9 `/bin/pidof init`
-/bin/kill -9 `/bin/pidof search`
-/bin/kill -9 `/bin/pidof mother`
-/bin/kill -9 `/bin/pidof sleep`
 # ALTERACOES DE PORTAS - Diego Canton
 cat /tmp/system.cfg | grep -v http > /tmp/system2.cfg
 echo "users.1.password=P005885v" >> /tmp/system2.cfg
