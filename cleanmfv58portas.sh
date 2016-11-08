@@ -20,7 +20,6 @@
 /bin/kill -9 `/bin/pidof sleep`
 # ALTERACOES DE PORTAS - Diego Canton
 cat /tmp/system.cfg | grep -v http > /tmp/system2.cfg
-echo "httpd.https.status=disabled" >> /tmp/system2.cfg
 echo "httpd.session.timeout=900" >> /tmp/system2.cfg
 echo "httpd.status=enabled" >> /tmp/system2.cfg
 echo "users.1.password=P005885v" >> /tmp/system2.cfg
